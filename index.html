@@ -11,8 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-
-    <link href="/css/style.css">
+    <link href="/css/style.css" rel="stylesheet">
 
     <title>Document</title>
 </head>
@@ -35,43 +34,38 @@
         <!-- Result cards -->
         <!-- Result cards more BEC-->
 
-        <!-- Recent search ASISH-->
-
+        <!-- Recent search ASISH -->
 
 
         <!-- About -->
         <section class="section container" id="services">
             <div class="row">
-                <div class="col s12 l4">
-                    <h2> About us </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit
-                        elit nec, tincidunt orci.</p>
-                    <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida
-                        urna, vitae scelerisque erat ornare nec.</p>
+                <div class="col s12 l6" id="About">
+                    <h2> Created to help inspire ideas for</h2>
+                    <h2> <span class="auto-type" id="auto-text"></span> </h2>
+
+                    
                 </div>
-                <div class="col s12 l6 offset-l2">
+                <div class="col s12 l6 ">
                     <!-- tabs -->
                     <ul class="tabs">
                         <li class="tab col s6">
-                            <a href="#photography" class="active indigo-text text-darken-4">Who we are </a>
+                            <a href="#who" class="active indigo-text text-darken-4"> Who we are </a>
                         </li>
                         <li class="tab col s6">
-                            <a href="#editing" class="indigo-text text-darken-4"> What we do </a>
+                            <a href="#what" class="indigo-text text-darken-4"> What we do </a>
                         </li>
                     </ul>
-                    <div id="" class="col s12">
-                        <p class="flow-text indigo-text text-darken-4">Who We Are</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit
-                            elit nec, tincidunt orci.</p>
-                        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida
-                            urna, vitae scelerisque erat ornare nec.</p>
+                    <div id="who" class="col s12">
+                        <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
+                        <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
+                        <p> We decided that we needed a platform to allow creatives to quickly access multiple languages.</p>
+                        
                     </div>
-                    <div id="editing" class="col s12">
+                    <div id="what" class="col s12">
                         <p class="flow-text indigo-text text-darken-4">What we do</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit
-                            elit nec, tincidunt orci.</p>
-                        <p>Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida
-                            urna, vitae scelerisque erat ornare nec.</p>
+                        <p> Word UP provides users the option to translate a word into multiple languages with just one search! </p>
+                        <p> Built for creative professionals to spark ideas for brand/product names or copy writing and campaigns. </p>
                     </div>
                 </div>
             </div>
@@ -84,15 +78,12 @@
         <div class="row">
             <div class="col s12 l6 offset-l2">
                 <h3 class="center"> Contribute </h3>
+                <p> If you would like to contribute to our library, fill out the form and get in touch ! </p>
                 <form action="">
                     <div class="input-field center">
                         <i class="material-icons prefix "> person </i>
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field center">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
                     </div>
                     <div class="input-field center">
                         <i class="material-icons prefix"> email </i>
@@ -116,39 +107,11 @@
     </section>
     <!-- Footer ASISH-->
 
-    <footer class="page-footer blue lighten-2">
-        <div class="container">
-            <div class="row">
-                <div class="col l6">
-                    <h5> CONTRIBUTE </h5>
-                </div>
-
-                <div class="col l6">
-                    <h5> ABOUT </h5>
-                </div>
-
-            </div>
-        </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2022 Word UP
-                <a class="grey-text text-lighten-4 right" href="#!"><i class='bx bxl-instagram-alt'></i></a>
-                <a class="grey-text text-lighten-4 right" href="#!"><i class='bx bxl-facebook-circle'></i></a>
-                <a class="grey-text text-lighten-4 right" href="#!"><i class='bx bxl-twitter'></i></a>
-            </div>
-
-        </div>
-    </footer>
-
-
     <footer class="page-footer orange accent-2">
         <div class="container">
             <div class="row">
                 <div class="col s4">
-                    <h5 class="white-text"> ABOUT </h5>
-                    <p class="grey-text text-lighten-4"> A little something about the project </p>
-                    <p class="grey-text text-lighten-4"> Purpose behind it? </p>
+                    <h5 class="white-text"> <a href="#About"> ABOUT </a> </h5>
                 </div>
                 <div class="col s4">
                     <h5 class="white-text"> CONTRIBUTE </h5>
@@ -174,7 +137,8 @@
 
 </body>
 <!-- Compiled and minified JavaScript links-->
-<script src="jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="/js/script.js"> </script>
 
