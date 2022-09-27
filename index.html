@@ -39,7 +39,7 @@
             <form class="col s12">
 <!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button, then hero image hides-->
                 <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
-                <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';"><h4>TRANSLATE</h4></a>
+               <!-- <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';"><h4>TRANSLATE</h4></a>-->
                 </div>
             </form>
         </div>
@@ -137,7 +137,8 @@
                       <div class="input-field col s8">
                         <i class="material-icons prefix">search</i>
                         <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">Enter your word...</label>
+                        <label id="translate" for="icon_prefix2">Enter your word...</label>
+                        <button id="btn">TRANSLATE</button>
 <!--Add multiple select dropdown for filtering search request-->
                         <div class="input-field col s6">
                             <select multiple>
