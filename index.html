@@ -33,27 +33,27 @@
 </head>
 
 <body>
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="section">
-            <form class="col s12">
+            <form class="col s12"> -->
 <!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button - hero image hides-->
-                <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
+                <!-- <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
                 <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';"><h4>TRANSLATE</h4></a>
                 </div>
             </form>
         </div>
     </div>
-</div>      
+</div>       -->
 
     <!-- Home logo -->
     <!-- Nav Bar above-->
         <!-- Hero Logo SAM/-->
 
         <!-- Side Bar PH-->
-        <div class="w-screen h-screen relative bg-slate-800" x-data="{open: false}">
+        <div class="relative" x-data="{open: false}">
             <!--Side bar-->
-            <div
+            <aside
                 x-bind:class="open? 'absolute left-0 w-20 bg-slate-300 flex flex-col h-screen p-4' :'absolute left-0 w-60 bg-slate-300 flex flex-col h-screen p-4'">
                 <!--Logo section-->
                 <div class="flex flex-row items-center h-10 w-full">
@@ -61,8 +61,6 @@
                     <div
                         class="h-10 w-10 rounded-full overflow-hidden mr-2 grid place-items-center bg-slate-800 text-slate-200 font-bold">
                         WP</div>
-                    <!--Logo text-->
-                    <h3 x-show="!open" class="text-2xl">Word Up </h3>
                 </div>
                 <!--Sidebar Menue(searchbox)-->
                 <div
@@ -77,6 +75,7 @@
                     </div>
 
                     <h3 x-show="!open" class="m1-3 text-sm">Recent Searches</h3>
+                    <div class="header first-title"></div>
                 </div>
                 <!--this is the little box-->
                 <div
@@ -89,6 +88,7 @@
                         </svg>
                     </div>
                     <h3 x-show="!open" class="m1-3 text-sm">Word of the day</h3>
+                    <div class="header second-title"></div>
 
                 </div>
                 <div
@@ -102,6 +102,7 @@
 
                     </div>
                     <h3 x-show="!open" class="m1-3 text-sm">Fun Facts/Popular</h3>
+                    
                 </div>
                 <!--minimize and maximise side bar-->
                 <div x-on:click="open = !open" class="h-screen w-10 absolute -right-5 top-0 flex items-center">
@@ -124,20 +125,16 @@
 
 
                 </div>
-            </div>
+            </aside>
         </div>
         <!-- Recent search summary-->
         <!-- Word of the Day -->
         <!-- Fun fact PH-->
         <!-- Add form for search bar-->
-        <div class="container">
+        <section class="container search-bar flex-col">
+            
             <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                      <div class="input-field col s8">
-                        <i class="material-icons prefix">search</i>
-                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                        <label for="icon_prefix2">Enter your word...</label>
+                
 <!--Add multiple select dropdown for filtering search request-->
                         <div class="input-field col s6">
                             <select multiple>
@@ -151,7 +148,7 @@
                     </div>
                   </form>
               </div>
-        </div>
+        </section>
 <!-- Result card for translation with activator to show more -->
         <section class="results-all">
             <div class="container">
