@@ -53,7 +53,7 @@
             </ul>
         </li>
         <li><a href="#!">Word of the Day</a></li>
-        <li><a href="#!">Random Word</a></li>
+        <li><a href="#random-word">Random Word</a></li>
 
     </ul>
 
@@ -108,16 +108,16 @@
                                 <!-- Fun fact PH-->
                                 <!-- Add form for search bar-->
 
-                                <div class="container">
+                            <!--   <div class="container">
                                     <div class="row">
                                         <form class="col s12">
                                             <div class="row">
                                                 <div class="input-field col s8">
                                                     <i class="material-icons prefix">search</i>
                                                     <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                                                    <label for="icon_prefix2">Enter your word...</label>
+                                                    <label for="icon_prefix2">Enter your word...</label> -->
                                                     <!--Add multiple select dropdown for filtering search request-->
-                                                    <div class="input-field col s6">
+                                                    <!-- <div class="input-field col s6">
                                                         <select multiple>
                                                             <option value="" disabled selected>Filter</option>
                                                             <option value="1">Option 1</option>
@@ -129,7 +129,7 @@
                                             </div>
                                         </form>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Result card for translation with activator to show more -->
                                 <section class="results-all">
                                     <div class="container">
@@ -204,27 +204,27 @@
         </div>
         </section>
         <!-- Result cards more BEC-->
-        <!--- Random word -->
-        <aside>
-        <div class="random-word-box col s12 l6">
-            <h3> Random Word: <span id="randomWord"> </span> </h3>
-            <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word
-                    !</a></button>
-        </div>
-        </aside>
-
 
         <!-- Recent search ASISH -->
-
-
+        <!--- Random word -->
+        <section class="section container" id="contact-form">
+            <div class="row">
+                <div class="col offset-s3">
+                    <div class="random-word-box">
+                        <h3> Random Word: <span id="randomWord"> </span> </h3>
+                        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large" onclick="M.toast({html: 'Abra-cadabra!', classes: 'rounded'})"> Get Word!</a></button>
+                    </div>
+                </div>
+            </div>            
+        </section>
 
         <!-- About -->
+        <main>
         <section class="section container" id="services">
             <div class="row">
                 <div class="col s12 l6" id="About">
                     <h2> Created to help inspire ideas for</h2>
                     <h2> <span class="auto-type" id="auto-text"></span> </h2>
-
 
                 </div>
                 <div class="col s12 l6">
@@ -287,7 +287,7 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            </div>            
         </section>
 
         <!-- Footer ASISH-->
