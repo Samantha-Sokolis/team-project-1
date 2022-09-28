@@ -8,3 +8,9 @@ span {
 .hero-image {
     position: relative;
 }
+
+.contribute {
+    padding: 40px;
+    justify-content: center;
+
+}
