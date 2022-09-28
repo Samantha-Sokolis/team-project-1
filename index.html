@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <link href="/css/style.css" rel="stylesheet">
 
     <title>WordUP: A quick and simple translation appplication</title>
@@ -36,44 +35,44 @@
     </div>
     </head>
 
-        <div class="container">
-            <div class="row">
-                <div class="section">
-                    <form class="col s12">
-                        <!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button - hero image hides-->
-                        <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
-                            <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';">
-                                <h4>TRANSLATE</h4>
-                            </a>
-                        </div>
-                    </form>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="section">
+                <form class="col s12">
+                    <!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button - hero image hides-->
+                    <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
+                        <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';">
+                            <h4>TRANSLATE</h4>
+                        </a>
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 
-        <!-- Home logo -->
-        <!-- Nav Bar above-->
-        <!-- Hero Logo SAM/-->
+    <!-- Home logo -->
+    <!-- Nav Bar above-->
+    <!-- Hero Logo SAM/-->
 
-        <!-- Side Bar PH-->
-        <!-- Recent search summary-->
-        <!-- Word of the Day -->
-        <!-- Fun fact PH-->
-        <!-- Add form for search bar-->
-        <section>
+    <!-- Side Bar PH-->
+    <!-- Recent search summary-->
+    <!-- Word of the Day -->
+    <!-- Fun fact PH-->
+    <!-- Add form for search bar-->
+    <section>
         <div class="container">
             <div class="row">
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s8">
-                            <i class="material-icons prefix" >search</i>
+                            <i class="material-icons prefix">search</i>
                             <textarea id="translate-input" class="materialize-textarea"></textarea>
                             <button id-="translate-btn"> Translate button </button>
                             <label for="icon_prefix2">Enter your word...</label>
 
                             <p class="translated-text"> Translated Text will appear below </p>
                             <div id="output"></div>
-                                                        
+
 
                             <!--Add multiple select dropdown for filtering search request-->
                             <div class="input-field col s6">
@@ -91,187 +90,186 @@
         </div>
     </section>
 
-        <!--- Random word -->
+    <!--- Random word -->
 
-        <div class="random-word-box">
-            <h1> Random Word: <span id= "randomWord"> </span> </h1>
-            <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word !</a></button>
-            
+    <div class="random-word-box">
+        <h1> Random Word: <span id="randomWord"> </span> </h1>
+        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word !</a></button>
+
+
+    </div>
+    <!-- Result card for translation with activator to show more -->
+    <section class="results-all">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="col s4 result">
+                        <div class="card">
+                            <div class="row"></div>
+                            <div class="card-translation center blue-text text-lighten-2">
+                                <h3 class="activator">Translation</h3>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator orange-text text-accent-3 origin">Origin<i
+                                        class="material-icons right">add</i></span>
+                                <p class="activator orange-text text-accent-2">Click to read more</p>
+                            </div>
+                            <!--Card reveal to display additional information-->
+                            <div class="card-reveal blue lighten-2">
+                                <span class="card-title white-text">Translation<i
+                                        class="material-icons right">close</i></span>
+                                <!--List items showing additional information for each card-->
+                                <ul class="white-text more">
+                                    <li class="origin"><b>Origin: </b>example</li>
+                                    <li class="definition"><b>Definition: </b>example</li>
+                                    <li class="context"><b>Context: </b>example</li>
+                                    <li class="phonetic"><b>Phonetic: </b>example</li>
+                                    <li class="similar"><b>Similar: </b>example</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Second card to confirm formatting - delete when API is connected-->
+                    <div class="col s4 result">
+                        <div class="card">
+                            <div class="row"></div>
+                            <div class="card-translation center blue-text text-lighten-2">
+                                <h3 class="activator">Translation</h3>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator orange-text text-accent-3 origin">Origin<i
+                                        class="material-icons right">add</i></span>
+                                <p class="activator orange-text text-accent-2">Click to read more</p>
+                            </div>
+                            <!--Card reveal to display additional information-->
+                            <div class="card-reveal blue lighten-2">
+                                <span class="card-title white-text">Translation<i
+                                        class="material-icons right">close</i></span>
+                                <!--List items showing additional information for each card-->
+                                <ul class="white-text more">
+                                    <li class="origin"><b>Origin: </b>example</li>
+                                    <li class="definition"><b>Definition: </b>example</li>
+                                    <li class="context"><b>Context: </b>example</li>
+                                    <li class="phonetic"><b>Phonetic: </b>example</li>
+                                    <li class="similar"><b>Similar: </b>example</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         </div>
-        <!-- Result card for translation with activator to show more -->
-        <section class="results-all">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="col s4 result">
-                            <div class="card">
-                                <div class="row"></div>
-                                <div class="card-translation center blue-text text-lighten-2">
-                                    <h3 class="activator">Translation</h3>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title activator orange-text text-accent-3 origin">Origin<i
-                                            class="material-icons right">add</i></span>
-                                    <p class="activator orange-text text-accent-2">Click to read more</p>
-                                </div>
-                                <!--Card reveal to display additional information-->
-                                <div class="card-reveal blue lighten-2">
-                                    <span class="card-title white-text">Translation<i
-                                            class="material-icons right">close</i></span>
-                                    <!--List items showing additional information for each card-->
-                                    <ul class="white-text more">
-                                        <li class="origin"><b>Origin: </b>example</li>
-                                        <li class="definition"><b>Definition: </b>example</li>
-                                        <li class="context"><b>Context: </b>example</li>
-                                        <li class="phonetic"><b>Phonetic: </b>example</li>
-                                        <li class="similar"><b>Similar: </b>example</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Second card to confirm formatting - delete when API is connected-->
-                        <div class="col s4 result">
-                            <div class="card">
-                                <div class="row"></div>
-                                <div class="card-translation center blue-text text-lighten-2">
-                                    <h3 class="activator">Translation</h3>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title activator orange-text text-accent-3 origin">Origin<i
-                                            class="material-icons right">add</i></span>
-                                    <p class="activator orange-text text-accent-2">Click to read more</p>
-                                </div>
-                                <!--Card reveal to display additional information-->
-                                <div class="card-reveal blue lighten-2">
-                                    <span class="card-title white-text">Translation<i
-                                            class="material-icons right">close</i></span>
-                                    <!--List items showing additional information for each card-->
-                                    <ul class="white-text more">
-                                        <li class="origin"><b>Origin: </b>example</li>
-                                        <li class="definition"><b>Definition: </b>example</li>
-                                        <li class="context"><b>Context: </b>example</li>
-                                        <li class="phonetic"><b>Phonetic: </b>example</li>
-                                        <li class="similar"><b>Similar: </b>example</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+    </section>
+    <!-- Result cards more BEC-->
+
+    <!-- Recent search ASISH -->
+
+    <!-- About -->
+    <section class="section container" id="services">
+        <div class="row">
+            <div class="col s12 l6" id="About">
+                <h2> Created to help inspire ideas for</h2>
+                <h2> <span class="auto-type" id="auto-text"></span> </h2>
+
+            </div>
+            <div class="col s12 l6 ">
+                <!-- tabs -->
+                <ul class="tabs">
+                    <li class="tab col s6">
+                        <a href="#who" class="active indigo-text text-darken-4"> Who we are </a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#what" class="indigo-text text-darken-4"> What we do </a>
+                    </li>
+                </ul>
+                <div id="who" class="col s12">
+                    <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
+                    <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
+                    <p> We decided that we needed a platform to allow creatives to quickly access multiple
+                        languages.</p>
+
+                </div>
+                <div id="what" class="col s12">
+                    <p class="flow-text indigo-text text-darken-4">What we do</p>
+                    <p> Word UP provides users the option to translate a word into multiple languages with just one
+                        search! </p>
+                    <p> Built for creative professionals to spark ideas for brand/product names or copy writing and
+                        campaigns. </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+    <!-- Contribute (form) -->
+
+    <section class="section container" id="contact-form">
+        <div class="row">
+            <div class="col s12 l6 offset-l2">
+                <h3 class="center"> Contribute </h3>
+                <p> If you would like to contribute to our library, fill out the form and get in touch ! </p>
+                <form action="">
+                    <div class="input-field center">
+                        <i class="material-icons prefix "> person </i>
+                        <input id="name" type="text" class="validate">
+                        <label for="name">Name</label>
                     </div>
-                </div>
+                    <div class="input-field center">
+                        <i class="material-icons prefix"> email </i>
+                        <input type="email" id="email">
+                        <label for="email"> Your Email </label>
+                    </div>
+                    <div class="input-field center">
+                        <i class="material-icons prefix "> message </i>
+                        <textarea name="contribute" id="" cols="30" rows="10"></textarea>
+                        <label for="message"> Your message </label>
+                    </div>
+                    <div class="input-field center">
+                        <button class="btn waves-effect waves-light" type="submit" name="action"
+                            href="mailto:exampleemail@wordup.com.au">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </form>
             </div>
+        </div>
+    </section>
+    <!-- Footer ASISH-->
 
-            </div>
-        </section>
-        <!-- Result cards more BEC-->
-
-        <!-- Recent search ASISH -->
-
-        <!-- About -->
-        <section class="section container" id="services">
+    <footer class="page-footer orange accent-2">
+        <div class="container">
             <div class="row">
-                <div class="col s12 l6" id="About">
-                    <h2> Created to help inspire ideas for</h2>
-                    <h2> <span class="auto-type" id="auto-text"></span> </h2>
-
+                <div class="col s4">
+                    <h5 class="white-text"> <a href="#About"> ABOUT </a> </h5>
                 </div>
-                <div class="col s12 l6 ">
-                    <!-- tabs -->
-                    <ul class="tabs">
-                        <li class="tab col s6">
-                            <a href="#who" class="active indigo-text text-darken-4"> Who we are </a>
-                        </li>
-                        <li class="tab col s6">
-                            <a href="#what" class="indigo-text text-darken-4"> What we do </a>
-                        </li>
+                <div class="col s4">
+                    <h5 class="white-text"> CONTRIBUTE </h5>
+                </div>
+                <div class="col s4">
+                    <h5 class="white-text"> CONNECT </h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!"> Instagram </a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"> Twitter </a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"> Facebook </a></li>
                     </ul>
-                    <div id="who" class="col s12">
-                        <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
-                        <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
-                        <p> We decided that we needed a platform to allow creatives to quickly access multiple
-                            languages.</p>
-
-                    </div>
-                    <div id="what" class="col s12">
-                        <p class="flow-text indigo-text text-darken-4">What we do</p>
-                        <p> Word UP provides users the option to translate a word into multiple languages with just one
-                            search! </p>
-                        <p> Built for creative professionals to spark ideas for brand/product names or copy writing and
-                            campaigns. </p>
-                    </div>
                 </div>
             </div>
-            </div>
-        </section>
-        </main>
-        <!-- Contribute (form) -->
-
-        <section class="section container" id="contact-form">
-            <div class="row">
-                <div class="col s12 l6 offset-l2">
-                    <h3 class="center"> Contribute </h3>
-                    <p> If you would like to contribute to our library, fill out the form and get in touch ! </p>
-                    <form action="">
-                        <div class="input-field center">
-                            <i class="material-icons prefix "> person </i>
-                            <input id="name" type="text" class="validate">
-                            <label for="name">Name</label>
-                        </div>
-                        <div class="input-field center">
-                            <i class="material-icons prefix"> email </i>
-                            <input type="email" id="email">
-                            <label for="email"> Your Email </label>
-                        </div>
-                        <div class="input-field center">
-                            <i class="material-icons prefix "> message </i>
-                            <textarea name="contribute" id="" cols="30" rows="10"></textarea>
-                            <label for="message"> Your message </label>
-                        </div>
-                        <div class="input-field center">
-                            <button class="btn waves-effect waves-light" type="submit" name="action"
-                                href="mailto:exampleemail@wordup.com.au">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-        <!-- Footer ASISH-->
-
-        <footer class="page-footer orange accent-2">
+        </div>
+        <div class="footer-copyright">
             <div class="container">
-                <div class="row">
-                    <div class="col s4">
-                        <h5 class="white-text"> <a href="#About"> ABOUT </a> </h5>
-                    </div>
-                    <div class="col s4">
-                        <h5 class="white-text"> CONTRIBUTE </h5>
-                    </div>
-                    <div class="col s4">
-                        <h5 class="white-text"> CONNECT </h5>
-                        <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!"> Instagram </a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!"> Twitter </a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!"> Facebook </a></li>
-                        </ul>
-                    </div>
-                </div>
+                © 2022 Word UP
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2022 Word UP
-                </div>
-            </div>
-        </footer>
+        </div>
+    </footer>
 
-    </body>
-    <!-- Compiled and minified JavaScript links-->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
-    <script src="js/script.js"> </script>
+</body>
+<!-- Compiled and minified JavaScript links-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+<script src="js/script.js"> </script>
 
 </html>
