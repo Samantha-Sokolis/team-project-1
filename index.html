@@ -29,8 +29,37 @@
             </ul>
           </div>
         </nav>
+
+    </div>
+    <ul id="slide-out" class="sidenav">
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Recent Searches<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <!----- Add Local Storage here ----->
+                        <ul>
+                            <li><a href="#!">First</a></li>
+                            <li><a href="#!">Second</a></li>
+                            <li><a href="#!">Third</a></li>
+                            <li><a href="#!">Fourth</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#!">Word of the Day</a></li>
+        <li><a href="#!">Random Word</a></li>
+
+    </ul>
+
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    </head>
+
       </div>
 </head>
+
 
 <body>
 <div class="container">
@@ -49,6 +78,24 @@
     <!-- Home logo -->
     <!-- Nav Bar above-->
         <!-- Hero Logo SAM/-->
+
+
+
+
+    <!-- Recent search summary-->
+    <!-- Word of the Day -->
+    <!-- Fun fact PH-->
+    <!-- Add form for search bar-->
+    <section>
+        <div class="container">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <i class="material-icons prefix">search</i>
+                            <textarea id="translate-input" class="materialize-textarea"></textarea>
+                            <button id-="translate-btn"> Translate button </button>
+                            <label for="icon_prefix2">Enter your word...</label>
 
         <!-- Side Bar PH-->
         <div class="w-screen h-screen relative bg-slate-800" x-data="{open: false}">
@@ -75,6 +122,7 @@
                                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
                     </div>
+
 
                     <h3 x-show="!open" class="m1-3 text-sm">Recent Searches</h3>
                 </div>
@@ -113,6 +161,10 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                         </svg>
 
+
+    <!-- Result card for translation with activator to show more -->
+    <section class="results-all">
+
                         <!--close icon-->
                         <svg x-show="open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -130,6 +182,7 @@
         <!-- Word of the Day -->
         <!-- Fun fact PH-->
         <!-- Add form for search bar-->
+
         <div class="container">
             <div class="row">
                 <form class="col s12">
@@ -214,7 +267,21 @@
           </section>
         <!-- Result cards more BEC-->
 
+
+        </div>
+    </section>
+    <!-- Result cards more BEC-->
+    <!--- Random word -->
+
+    <div class="random-word-box col s12 l6">
+        <h3> Random Word: <span id="randomWord"> </span> </h3>
+        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word !</a></button>
+
+
+    </div>
+
         <!-- Recent search ASISH -->
+
 
 
         <!-- About -->
