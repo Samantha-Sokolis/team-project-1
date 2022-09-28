@@ -33,6 +33,30 @@
             </div>
         </nav>
     </div>
+    <ul id="slide-out" class="sidenav">
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">Recent Searches<i class="material-icons">arrow_drop_down</i></a>
+                    <div class="collapsible-body">
+                        <!----- Add Local Storage here ----->
+                        <ul>
+                            <li><a href="#!">First</a></li>
+                            <li><a href="#!">Second</a></li>
+                            <li><a href="#!">Third</a></li>
+                            <li><a href="#!">Fourth</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#!">Word of the Day</a></li>
+        <li><a href="#!">Random Word</a></li>
+
+    </ul>
+
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
     </head>
 
     <div class="container">
@@ -54,7 +78,8 @@
     <!-- Nav Bar above-->
     <!-- Hero Logo SAM/-->
 
-    <!-- Side Bar PH-->
+
+
     <!-- Recent search summary-->
     <!-- Word of the Day -->
     <!-- Fun fact PH-->
@@ -90,14 +115,6 @@
         </div>
     </section>
 
-    <!--- Random word -->
-
-    <div class="random-word-box">
-        <h1> Random Word: <span id="randomWord"> </span> </h1>
-        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word !</a></button>
-
-
-    </div>
     <!-- Result card for translation with activator to show more -->
     <section class="results-all">
         <div class="container">
@@ -163,6 +180,14 @@
         </div>
     </section>
     <!-- Result cards more BEC-->
+    <!--- Random word -->
+
+    <div class="random-word-box col s12 l6">
+        <h3> Random Word: <span id="randomWord"> </span> </h3>
+        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word !</a></button>
+
+
+    </div>
 
     <!-- Recent search ASISH -->
 
