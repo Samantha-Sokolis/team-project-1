@@ -34,3 +34,33 @@ var typed = new Typed (".auto-type",{
     loop: true
 });
 
+// Fun fact API 
+
+var randomWordEl = $('#randomWord')
+var APIkey = "4s5jzik/flN/oJ+DRV00pg==FCTdV9mEsQVKjz4S";
+
+//
+
+function getRandomWord (event){
+  event.preventDefault();
+    var apiUrl = "https://api.api-ninjas.com/v1/randomword";
+    fetch(apiUrl)
+    .then (function (response) {
+            if (response.status == 200) {
+            console.log("This is working!" + response);
+            response.json().then (function (data) {
+                console.log (data);
+              
+              const {word} = data;
+            
+        // Display random word from response
+
+        $(randomWordEl).html(word);
+              })
+          }
+        })
+}
+
+$("#random-button").on("click",getRandomWord);
+
+
