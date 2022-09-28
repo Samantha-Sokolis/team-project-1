@@ -2,7 +2,7 @@
 /* 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
+    //var instances = M.FormSelect.init(elems, options);
   });
  */
   // Or with jQuery
@@ -14,7 +14,21 @@ document.addEventListener('DOMContentLoaded', function() {
 // About us tabs materialize animate
 $('.tabs').tabs();
 
+<<<<<<< HEAD
+// Side Nav animation
+
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+$(document).ready(function() {
+  $('.collapsible').collapsible();
+})
+
+// Typing animation script
+
+=======
 // Typing animation
+>>>>>>> main
 var typed = new Typed (".auto-type",{
     strings: ["brand names", "product names", "copy writing", "campaigns", "art projects"],
     typeSpeed: 40,
