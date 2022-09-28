@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link href="/css/style.css" rel="stylesheet">
 
     <title>WordUP: A quick and simple translation appplication</title>
@@ -20,188 +21,236 @@
     <!--Header/NavBar from Materialize- placeholder links still here - SAM-->
     <div class="navbar-fixed">
         <nav>
-            <div class="nav-wrapper blue lighten-2">
-                <a href="#!" class="brand-logo"><img src="./assets/wordup_logo_hero_white.png"></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">
-                            <h5>How-to</h5>
-                        </a></li>
-                    <li><a href="badges.html">
-                            <h5>History</h5>
-                        </a></li>
-                </ul>
-            </div>
+          <div class="nav-wrapper blue lighten-2">
+            <a href="#!" class="brand-logo"><img src="./assets/wordup_logo_hero_white.png"></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="sass.html"><h5>How-to</h5></a></li>
+              <li><a href="badges.html"><h5>History</h5></a></li>
+            </ul>
+          </div>
         </nav>
-    </div>
-    </head>
+      </div>
+</head>
 
-    <div class="container">
-        <div class="row">
-            <div class="section">
-                <form class="col s12">
-                    <!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button - hero image hides-->
-                    <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
-                        <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';">
-                            <h4>TRANSLATE</h4>
-                        </a>
-                    </div>
-                </form>
-            </div>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="section">
+            <form class="col s12">
+<!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button - hero image hides-->
+                <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
+                <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';"><h4>TRANSLATE</h4></a>
+                </div>
+            </form>
         </div>
     </div>
+</div>      
 
     <!-- Home logo -->
     <!-- Nav Bar above-->
-    <!-- Hero Logo SAM/-->
+        <!-- Hero Logo SAM/-->
 
-    <!-- Side Bar PH-->
-    <!-- Recent search summary-->
-    <!-- Word of the Day -->
-    <!-- Fun fact PH-->
-    <!-- Add form for search bar-->
-    <section>
+        <!-- Side Bar PH-->
+        <div class="w-screen h-screen relative bg-slate-800" x-data="{open: false}">
+            <!--Side bar-->
+            <div
+                x-bind:class="open? 'absolute left-0 w-20 bg-slate-300 flex flex-col h-screen p-4' :'absolute left-0 w-60 bg-slate-300 flex flex-col h-screen p-4'">
+                <!--Logo section-->
+                <div class="flex flex-row items-center h-10 w-full">
+                    <!--circle logo-->
+                    <div
+                        class="h-10 w-10 rounded-full overflow-hidden mr-2 grid place-items-center bg-slate-800 text-slate-200 font-bold">
+                        WP</div>
+                    <!--Logo text-->
+                    <h3 x-show="!open" class="text-2xl">Word Up </h3>
+                </div>
+                <!--Sidebar Menue(searchbox)-->
+                <div
+                    class="flex flex-row items-center mt-10 h-9 bg-slate-400 rounded-md overflow-hidden text-slate-900">
+                    <!--search icon has the links-->
+                    <div class="grid place-items-center h-9 w-9">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </div>
+
+                    <h3 x-show="!open" class="m1-3 text-sm">Recent Searches</h3>
+                </div>
+                <!--this is the little box-->
+                <div
+                    class="flex flex-row items-center mt-40 h-9 bg-slate-400 rounded-md overflow-hidden text-slate-900">
+                    <div class="grid place-items-center h-9 w-9">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+                        </svg>
+                    </div>
+                    <h3 x-show="!open" class="m1-3 text-sm">Word of the day</h3>
+
+                </div>
+                <div
+                    class="flex flex-row items-center mt-40 h-9 bg-slate-400 rounded-md overflow-hidden text-slate-900">
+                    <div class="grid place-items-center h-9 w-9">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
+                        </svg>
+
+                    </div>
+                    <h3 x-show="!open" class="m1-3 text-sm">Fun Facts/Popular</h3>
+                </div>
+                <!--minimize and maximise side bar-->
+                <div x-on:click="open = !open" class="h-screen w-10 absolute -right-5 top-0 flex items-center">
+                    <!-- open icon-->
+                    <div
+                        class="h-10 w-10 rounded-full overflow-hidden grid place-items-center bg-slate-300 cursor-pointer">
+                        <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+
+                        <!--close icon-->
+                        <svg x-show="open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                        </svg>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Recent search summary-->
+        <!-- Word of the Day -->
+        <!-- Fun fact PH-->
+        <!-- Add form for search bar-->
         <div class="container">
             <div class="row">
                 <form class="col s12">
                     <div class="row">
-                        <div class="input-field col s8">
-                            <i class="material-icons prefix">search</i>
-                            <textarea id="translate-input" class="materialize-textarea"></textarea>
-                            <button id-="translate-btn"> Translate button </button>
-                            <label for="icon_prefix2">Enter your word...</label>
-
-                            <p class="translated-text"> Translated Text will appear below </p>
-                            <div id="output"></div>
-
-
-                            <!--Add multiple select dropdown for filtering search request-->
-                            <div class="input-field col s6">
-                                <select multiple>
-                                    <option value="" disabled selected>Filter</option>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                </select>
-                            </div>
-                        </div>
+                      <div class="input-field col s8">
+                        <i class="material-icons prefix">search</i>
+                        <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
+                        <label for="icon_prefix2">Enter your word...</label>
+<!--Add multiple select dropdown for filtering search request-->
+                        <div class="input-field col s6">
+                            <select multiple>
+                              <option value="" disabled selected>Filter</option>
+                              <option value="1">Option 1</option>
+                              <option value="2">Option 2</option>
+                              <option value="3">Option 3</option>
+                            </select>
+                          </div>
+                      </div>
                     </div>
-                </form>
-            </div>
+                  </form>
+              </div>
         </div>
-    </section>
-
-    <!--- Random word -->
-
-    <div class="random-word-box">
-        <h1> Random Word: <span id="randomWord"> </span> </h1>
-        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word !</a></button>
-
-
-    </div>
-    <!-- Result card for translation with activator to show more -->
-    <section class="results-all">
-        <div class="container">
+<!-- Result card for translation with activator to show more -->
+        <section class="results-all">
+            <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <div class="col s4 result">
-                        <div class="card">
-                            <div class="row"></div>
-                            <div class="card-translation center blue-text text-lighten-2">
-                                <h3 class="activator">Translation</h3>
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator orange-text text-accent-3 origin">Origin<i
-                                        class="material-icons right">add</i></span>
-                                <p class="activator orange-text text-accent-2">Click to read more</p>
-                            </div>
-                            <!--Card reveal to display additional information-->
-                            <div class="card-reveal blue lighten-2">
-                                <span class="card-title white-text">Translation<i
-                                        class="material-icons right">close</i></span>
-                                <!--List items showing additional information for each card-->
-                                <ul class="white-text more">
-                                    <li class="origin"><b>Origin: </b>example</li>
-                                    <li class="definition"><b>Definition: </b>example</li>
-                                    <li class="context"><b>Context: </b>example</li>
-                                    <li class="phonetic"><b>Phonetic: </b>example</li>
-                                    <li class="similar"><b>Similar: </b>example</li>
-                                </ul>
-                            </div>
+                <div class="col s4 result">
+                    <div class="card">
+                        <div class="row"></div>
+                        <div class="card-translation center blue-text text-lighten-2">
+                          <h3 class="activator">Translation</h3>
                         </div>
-                    </div>
-                    <!--Second card to confirm formatting - delete when API is connected-->
-                    <div class="col s4 result">
-                        <div class="card">
-                            <div class="row"></div>
-                            <div class="card-translation center blue-text text-lighten-2">
-                                <h3 class="activator">Translation</h3>
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title activator orange-text text-accent-3 origin">Origin<i
-                                        class="material-icons right">add</i></span>
-                                <p class="activator orange-text text-accent-2">Click to read more</p>
-                            </div>
-                            <!--Card reveal to display additional information-->
-                            <div class="card-reveal blue lighten-2">
-                                <span class="card-title white-text">Translation<i
-                                        class="material-icons right">close</i></span>
-                                <!--List items showing additional information for each card-->
-                                <ul class="white-text more">
-                                    <li class="origin"><b>Origin: </b>example</li>
-                                    <li class="definition"><b>Definition: </b>example</li>
-                                    <li class="context"><b>Context: </b>example</li>
-                                    <li class="phonetic"><b>Phonetic: </b>example</li>
-                                    <li class="similar"><b>Similar: </b>example</li>
-                                </ul>
-                            </div>
+                        <div class="card-content">
+                          <span class="card-title activator orange-text text-accent-3 origin" >Origin<i class="material-icons right">add</i></span>
+                          <p class="activator orange-text text-accent-2">Click to read more</p>
                         </div>
+<!--Card reveal to display additional information-->
+                        <div class="card-reveal blue lighten-2">
+                          <span class="card-title white-text">Translation<i class="material-icons right">close</i></span>
+<!--List items showing additional information for each card-->
+                          <ul class="white-text more">
+                            <li class="origin"><b>Origin: </b>example</li>
+                            <li class="definition"><b>Definition: </b>example</li>
+                            <li class="context"><b>Context: </b>example</li>
+                            <li class="phonetic"><b>Phonetic: </b>example</li>
+                            <li class="similar"><b>Similar: </b>example</li>
+                          </ul>
+                        </div>
+                      </div>
+                      </div>
+<!--Second card to confirm formatting - delete when API is connected-->
+                      <div class="col s4 result">
+                      <div class="card">
+                        <div class="row"></div>
+                        <div class="card-translation center blue-text text-lighten-2">
+                          <h3 class="activator">Translation</h3>
+                        </div>
+                        <div class="card-content">
+                          <span class="card-title activator orange-text text-accent-3 origin" >Origin<i class="material-icons right">add</i></span>
+                          <p class="activator orange-text text-accent-2">Click to read more</p>
+                        </div>
+<!--Card reveal to display additional information-->
+                        <div class="card-reveal blue lighten-2">
+                          <span class="card-title white-text">Translation<i class="material-icons right">close</i></span>
+<!--List items showing additional information for each card-->
+                          <ul class="white-text more">
+                            <li class="origin"><b>Origin: </b>example</li>
+                            <li class="definition"><b>Definition: </b>example</li>
+                            <li class="context"><b>Context: </b>example</li>
+                            <li class="phonetic"><b>Phonetic: </b>example</li>
+                            <li class="similar"><b>Similar: </b>example</li>
+                          </ul>
+                        </div>
+                      </div>
+                      </div>
+                      </div>
+                </div>
+              </div>
+        
+              </div>
+          </section>
+        <!-- Result cards more BEC-->
+
+        <!-- Recent search ASISH -->
+
+
+        <!-- About -->
+        <section class="section container" id="services">
+            <div class="row">
+                <div class="col s12 l6" id="About">
+                    <h2> Created to help inspire ideas for</h2>
+                    <h2> <span class="auto-type" id="auto-text"></span> </h2>
+
+                    
+                </div>
+                <div class="col s12 l6 ">
+                    <!-- tabs -->
+                    <ul class="tabs">
+                        <li class="tab col s6">
+                            <a href="#who" class="active indigo-text text-darken-4"> Who we are </a>
+                        </li>
+                        <li class="tab col s6">
+                            <a href="#what" class="indigo-text text-darken-4"> What we do </a>
+                        </li>
+                    </ul>
+                    <div id="who" class="col s12">
+                        <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
+                        <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
+                        <p> We decided that we needed a platform to allow creatives to quickly access multiple languages.</p>
+                        
+                    </div>
+                    <div id="what" class="col s12">
+                        <p class="flow-text indigo-text text-darken-4">What we do</p>
+                        <p> Word UP provides users the option to translate a word into multiple languages with just one search! </p>
+                        <p> Built for creative professionals to spark ideas for brand/product names or copy writing and campaigns. </p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        </div>
-    </section>
-    <!-- Result cards more BEC-->
-
-    <!-- Recent search ASISH -->
-
-    <!-- About -->
-    <section class="section container" id="services">
-        <div class="row">
-            <div class="col s12 l6" id="About">
-                <h2> Created to help inspire ideas for</h2>
-                <h2> <span class="auto-type" id="auto-text"></span> </h2>
-
             </div>
-            <div class="col s12 l6 ">
-                <!-- tabs -->
-                <ul class="tabs">
-                    <li class="tab col s6">
-                        <a href="#who" class="active indigo-text text-darken-4"> Who we are </a>
-                    </li>
-                    <li class="tab col s6">
-                        <a href="#what" class="indigo-text text-darken-4"> What we do </a>
-                    </li>
-                </ul>
-                <div id="who" class="col s12">
-                    <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
-                    <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
-                    <p> We decided that we needed a platform to allow creatives to quickly access multiple
-                        languages.</p>
-
-                </div>
-                <div id="what" class="col s12">
-                    <p class="flow-text indigo-text text-darken-4">What we do</p>
-                    <p> Word UP provides users the option to translate a word into multiple languages with just one
-                        search! </p>
-                    <p> Built for creative professionals to spark ideas for brand/product names or copy writing and
-                        campaigns. </p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
+        </section>
     </main>
     <!-- Contribute (form) -->
 
@@ -264,12 +313,15 @@
         </div>
     </footer>
 
+
+
 </body>
 <!-- Compiled and minified JavaScript links-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
 <script src="js/script.js"> </script>
 
 </html>
