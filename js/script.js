@@ -22,19 +22,15 @@ var typed = new Typed (".auto-type",{
     loop: true
 });
 
-// Random Word API 
+// Fun fact API 
 
 var randomWordEl = $('#randomWord')
 var APIkey = "4s5jzik/flN/oJ+DRV00pg==FCTdV9mEsQVKjz4S";
 
 //
 
-function displayRandomWord(event){
+function getRandomWord (event){
   event.preventDefault();
-  getRandomWord ();
-}
-
-function getRandomWord (){
     var apiUrl = "https://api.api-ninjas.com/v1/randomword";
     fetch(apiUrl)
     .then (function (response) {
@@ -53,41 +49,4 @@ function getRandomWord (){
         })
 }
 
-getRandomWord();
-
-
-// Example POST method implementation:
-async function postData(url = '', data = {}) {
-  // Default options are marked with *
-  const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    headers: {
-      'Content-Type': 'application/json',
-      'X-API-Key': '<Sign-In-For-API-Key>',
-      'Accept': 'application/json',
-    },
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
-  });
-  return response.json(); // parses JSON response into native JavaScript objects
-}
-
-postData('https://example.com/answer', { answer: 42 })
-  .then((data) => {
-    console.log(data); // JSON data parsed by `data.json()` call
-  });
-
-
-$("#random-button").on("click",displayRandomWord);
-/* $.ajax({
-  method: 'GET',
-  url: 'https://api.api-ninjas.com/v1/randomword',
-  headers: { 'X-Api-Key': '4s5jzik/flN/oJ+DRV00pg==FCTdV9mEsQVKjz4S'},
-  contentType: 'application/json',
-  success: function(result) {
-      console.log(result);
-  },
-  error: function ajaxError(jqXHR) {
-      console.error('Error: ', jqXHR.responseText);
-  }
-});
- */
+$("#random-button").on("click",getRandomWord);
