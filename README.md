@@ -14,7 +14,7 @@ WHEN I open the webpage,
 THEN I am presented with a logo, a search bar, and a random word generator
 
 WHEN I enter a new word in the search bar
-THEN I have the option to filter the results
+THEN I have the option to filter the results - moved to future dev due to limitations of new API
 
 WHEN the search results are returned,
 THEN I can view translations of different regional languages
@@ -40,10 +40,10 @@ Open the application in your browser and enter a word into the search bar to beg
 
 Website URL: ("https://samantha-sokolis.github.io/team-project-1/")
 
-![Screenshot of webpage and wireframe]("assets/WordUp_screenshot_translated.png")
-    ("assets/WordUp_Wireframe_Filters.jpg")
-    ("assets/WordUp_Wireframe_Home.jpg")
-    ("assets/WordUp_Wireframe_Results.jpg")
+![Screenshot of webpage](team-project-1\assets\WordUp_screenshot_translated.png)
+![Screenshot of wireframe with filters - now future dev](team-project-1\assets\WordUp_Wireframe_Filters.jpg)
+![Screenshot of wireframe](team-project-1\assets\WordUp_Wireframe_Home.jpg)
+![Screenshot of wireframe with results](team-project-1\assets\WordUp_Wireframe_Result.jpg)
 
 ## Directions for Future Development
 - Sidebar function to include links to past searches 
@@ -61,9 +61,27 @@ CSS:
 https://materializecss.com/
 https://tailwindcss.com/ (not used for final after conflicts with Materialize)
 
-APIs:
-lecto-translation.p.rapidapi.com 
-https://api-ninjas.com/api/randomword
+APIs and documentation:
+lecto-translation.p.rapidapi.com - Lecto API on Rapid API
+https://dashboard.lecto.ai/account/JAqhENqX4EuN8rL3JyWy/ - Lecto documentation
+https://api-ninjas.com/api/randomword - randormword api documentation
+https://www.hostinger.com/tutorials/err_name_not_resolved - API error
+https://github.com/lecto-ai/docs/blob/main/examples/javascript/fetch_browser.js
+
+Bug Fixes:
+https://stackoverflow.com/questions/70236391/javascript-variable-in-the-body-of-a-fetch-request - Stack Overflow thread on adding a variable into a fetch body paramater
+
+Social media placeholder links:
+Instagram: https://www.instagram.com/corgistagrams/?hl=en
+Facebook: https://www.facebook.com/groups/555989291132852/
+Twitter: https://twitter.com/aboutcorgis?lang=en
+
+Images and wireframing:
+Adobe XD - wireframing
+Adobe Illustrator - logos and images
+
+Text animation in About section:
+https://mattboldt.com/demos/typed-js/
 
 ## License
 
