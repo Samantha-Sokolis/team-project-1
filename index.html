@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 
     <title>WordUP: A quick and simple translation application</title>
 </head>
@@ -55,7 +55,17 @@
         <li><a href="#!">Word of the Day</a></li>
         <li><a href="#random-word">Random Word</a></li>
 
+                    </div>
+                    <div class="card-action">
+                        <button type="submit" id="random-button"> <a class="btn-large #4fc3f7 light-blue lighten-2"> Get
+                                Word
+                                !</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </ul>
+    
 
     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class=" large material-icons">menu</i></a>
 
@@ -93,117 +103,203 @@
         <!-- Fun fact PH-->
         <!-- Add form for search bar-->
         <section>
+            <!-- Recent search summary-->
+            <!-- Word of the Day -->
+            <!-- Fun fact PH-->
+            <!-- Add form for search bar-->
+
             <div class="container">
                 <div class="row">
-                    <form class="col s12">
+                    <form class="col s12" id="search-form">
                         <div class="row">
-                            <div class="input-field col s8">
+                            <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
-                                <textarea id="translate-input" class="materialize-textarea"></textarea>
-                                <button id-="translate-btn"> Translate button </button>
-                                <label for="icon_prefix2">Enter your word...</label>
-
-                                <!-- Recent search summary-->
-                                <!-- Word of the Day -->
-                                <!-- Fun fact PH-->
-                                <!-- Add form for search bar-->
-
-                            <!--   <div class="container">
-                                    <div class="row">
-                                        <form class="col s12">
-                                            <div class="row">
-                                                <div class="input-field col s8">
-                                                    <i class="material-icons prefix">search</i>
-                                                    <textarea id="icon_prefix2" class="materialize-textarea"></textarea>
-                                                    <label for="icon_prefix2">Enter your word...</label> -->
-                                                    <!--Add multiple select dropdown for filtering search request-->
-                                                    <!-- <div class="input-field col s6">
-                                                        <select multiple>
-                                                            <option value="" disabled selected>Filter</option>
-                                                            <option value="1">Option 1</option>
-                                                            <option value="2">Option 2</option>
-                                                            <option value="3">Option 3</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div> -->
-                                <!-- Result card for translation with activator to show more -->
-                                <section class="results-all">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col s12">
-                                                <div class="col s4 result">
-                                                    <div class="card">
-                                                        <div class="row"></div>
-                                                        <div class="card-translation center blue-text text-lighten-2">
-                                                            <h3 class="activator">Translation</h3>
-                                                        </div>
-                                                        <div class="card-content">
-                                                            <span
-                                                                class="card-title activator orange-text text-accent-3 origin">Origin<i
-                                                                    class="material-icons right">add</i></span>
-                                                            <p class="activator orange-text text-accent-2">Click to read
-                                                                more</p>
-                                                        </div>
-                                                        <!--Card reveal to display additional information-->
-                                                        <div class="card-reveal blue lighten-2">
-                                                            <span class="card-title white-text">Translation<i
-                                                                    class="material-icons right">close</i></span>
-                                                            <!--List items showing additional information for each card-->
-                                                            <ul class="white-text more">
-                                                                <li class="origin"><b>Origin: </b>example</li>
-                                                                <li class="definition"><b>Definition: </b>example</li>
-                                                                <li class="context"><b>Context: </b>example</li>
-                                                                <li class="phonetic"><b>Phonetic: </b>example</li>
-                                                                <li class="similar"><b>Similar: </b>example</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--Second card to confirm formatting - delete when API is connected-->
-                                                <div class="col s4 result">
-                                                    <div class="card">
-                                                        <div class="row"></div>
-                                                        <div class="card-translation center blue-text text-lighten-2">
-                                                            <h3 class="activator">Translation</h3>
-                                                        </div>
-                                                        <div class="card-content">
-                                                            <span
-                                                                class="card-title activator orange-text text-accent-3 origin">Origin<i
-                                                                    class="material-icons right">add</i></span>
-                                                            <p class="activator orange-text text-accent-2">Click to read
-                                                                more</p>
-                                                        </div>
-                                                        <!--Card reveal to display additional information-->
-                                                        <div class="card-reveal blue lighten-2">
-                                                            <span class="card-title white-text">Translation<i
-                                                                    class="material-icons right">close</i></span>
-                                                            <!--List items showing additional information for each card-->
-                                                            <ul class="white-text more">
-                                                                <li class="origin"><b>Origin: </b>example</li>
-                                                                <li class="definition"><b>Definition: </b>example</li>
-                                                                <li class="context"><b>Context: </b>example</li>
-                                                                <li class="phonetic"><b>Phonetic: </b>example</li>
-                                                                <li class="similar"><b>Similar: </b>example</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                
+                                <input id="search-input" class="form-input w-100" type="text"
+                                    placeholder="Enter your word...">
+                                <!--Add multiple select dropdown for filtering search request
+                                                     <div class="input-field col s8">
+                                                        <select multiple id="language-input">
+                                                            <option value="" disabled selected>Choose up to 4 languages</option>
+                                                            <option value="ar">Arabic</option>
+                                                            <option value="nl">Dutch</option>
+                                                            <option value="fr">French</option>
+                                                            <option value="de">German</option>
+                                                            <option value="el">Greek</option>
+                                                            <option value="it">Italian</option>
+                                                            <option value="ja">Japanese</option>
+                                                            <option value="ru">Russian</option>
+                                                            <option value="es">Spanish</option>
+                                                            <option value="th">Thai</option>
+                                                        </select> -->
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Translate
+                                    <i class="material-icons right">send</i>
+                                </button>
                             </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+            </div>
+            <!-- Result card for translation for initial translation-->
+            <section class="results-all" id="card-results">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="col s4 result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2">
+                                        <h3 class="activator" id="ar-translation">Translated</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-ar">Arabic</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="nl-translation">Dutch</h3>
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="nl-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="fr-translation">French</h3>
+
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="fr-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="de-translation">German</h3>
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="de-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="el-translation">Greek</h3>
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="el-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="it-translation">Italian</h3>
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="it-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="ja-translation">Japanese</h3>
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="ja-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="ru-translation">Russian</h3>
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="ru-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col s4 result">
+                                <div class="card #64b5f6 blue lighten-2">
+                                    <div class="row"></div>
+                                    <div class="card-translation center white-text">
+                                        <h3 id="es-translation">Spanish</h3>
+                                    </div>
+                                    <div class="card-content center">
+                                        <button type="submit" id="es-button"
+                                            class="btn-small center white orange-text text-accent-2">
+                                            <strong>Translate!</strong></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+            <!--Result cards more BEC-->
+
         </section>
         <!-- Result cards more BEC-->
 
-
-        </div>
-        </section>
-        <!-- Result cards more BEC-->
 
         <!-- Recent search ASISH -->
         <!--- Random word -->
@@ -217,6 +313,7 @@
                 </div>
             </div>            
         </section>
+
 
         <!-- About -->
         <main>
