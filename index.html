@@ -24,11 +24,11 @@
             <div class="nav-wrapper blue lighten-2">
                 <a href="#!" class="brand-logo"><img src="./assets/wordup_logo_hero_white.png"></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">
-                            <h5>How-to</h5>
+                    <li><a href="#About">
+                            <h5>About</h5>
                         </a></li>
-                    <li><a href="badges.html">
-                            <h5>History</h5>
+                    <li><a href="#Contribute">
+                            <h5>Contribute</h5>
                         </a></li>
                 </ul>
             </div>
@@ -53,12 +53,7 @@
             </ul>
         </li>
         <li><a href="#!">Word of the Day</a></li>
-        <li><a href="#!">Random Word</a></li>
-        <div class="row">
-            <div class="col center">
-                <div class="card">
-                    <div class="card-content orange-text text-accent-2">
-                        <h4> Random Word: <span id="randomWord"> </span> </h4>
+        <li><a href="#random-word">Random Word</a></li>
 
                     </div>
                     <div class="card-action">
@@ -72,7 +67,7 @@
     </ul>
     
 
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class=" large material-icons">menu</i></a>
 
     </head>
 
@@ -119,6 +114,7 @@
                         <div class="row">
                             <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
+                                
                                 <input id="search-input" class="form-input w-100" type="text"
                                     placeholder="Enter your word...">
                                 <!--Add multiple select dropdown for filtering search request
@@ -186,6 +182,7 @@
                                     <div class="row"></div>
                                     <div class="card-translation center white-text">
                                         <h3 id="fr-translation">French</h3>
+
                                     </div>
                                     <div class="card-content center">
                                         <button type="submit" id="fr-button"
@@ -302,31 +299,32 @@
 
         </section>
         <!-- Result cards more BEC-->
-        <!--- Random word 
 
-        <div class="random-word-box card col s6 l3">
-            <h3> Random Word: <span id="randomWord"> </span> </h3>
-            <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"> Get Word
-                    !</a></button>
 
-        </div>
-
-         Recent search ASISH -->
-
-        </div>
+        <!-- Recent search ASISH -->
+        <!--- Random word -->
+        <section class="section container" id="contact-form">
+            <div class="row">
+                <div class="col offset-s3">
+                    <div class="random-word-box">
+                        <h3> Random Word: <span id="randomWord"> </span> </h3>
+                        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large" onclick="M.toast({html: 'Abra-cadabra!', classes: 'rounded'})"> Get Word!</a></button>
+                    </div>
+                </div>
+            </div>            
         </section>
 
 
         <!-- About -->
+        <main>
         <section class="section container" id="services">
             <div class="row">
                 <div class="col s12 l6" id="About">
                     <h2> Created to help inspire ideas for</h2>
                     <h2> <span class="auto-type" id="auto-text"></span> </h2>
 
-
                 </div>
-                <div class="col s12 l6 ">
+                <div class="col s12 l6">
                     <!-- tabs -->
                     <ul class="tabs">
                         <li class="tab col s6">
@@ -340,7 +338,7 @@
                         <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
                         <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
                         <p> We decided that we needed a platform to allow creatives to quickly access multiple
-                            languages.</p>
+                            languages without additional search queries. </p>
 
                     </div>
                     <div id="what" class="col s12">
@@ -360,7 +358,7 @@
         <section class="section container" id="contact-form">
             <div class="row">
                 <div class="col s12 l6 offset-l2">
-                    <h3 class="center"> Contribute </h3>
+                    <h3 class="center" id="Contribute"> Contribute </h3>
                     <p> If you would like to contribute to our library, fill out the form and get in touch ! </p>
                     <form action="">
                         <div class="input-field center">
@@ -380,31 +378,32 @@
                         </div>
                         <div class="input-field center">
                             <button class="btn waves-effect waves-light" type="submit" name="action"
-                                href="mailto:exampleemail@wordup.com.au">Submit
+                                href="mailto:exampleemail@wordup.com.au--"onclick="M.toast({html: 'Your form has been successfully submitted', completeCallback: function(){alert('Arigato!    Merci!     Danke!     Efharisto!     Grazie!')}})">Submit
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
                     </form>
                 </div>
-            </div>
+            </div>            
         </section>
+
         <!-- Footer ASISH-->
 
         <footer class="page-footer orange accent-2">
-            <div class="container">
+            <div class="Contribute">
                 <div class="row">
-                    <div class="col s4">
+                    <div class="col s3 offset-l2">
                         <h5 class="white-text"> <a href="#About"> ABOUT </a> </h5>
                     </div>
-                    <div class="col s4">
-                        <h5 class="white-text"> CONTRIBUTE </h5>
+                    <div class="col s3">
+                        <h5 class="white-text"> <a href="#Contribute"> CONTRIBUTE </a> </h5>
                     </div>
-                    <div class="col s4">
+                    <div class="col s3">
                         <h5 class="white-text"> CONNECT </h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!"> Instagram </a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!"> Twitter </a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!"> Facebook </a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/corgistagrams/?hl=en"> Instagram </a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://twitter.com/aboutcorgis?lang=en"> Twitter </a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/groups/555989291132852/"> Facebook </a></li>
                         </ul>
                     </div>
                 </div>

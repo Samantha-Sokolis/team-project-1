@@ -1,6 +1,7 @@
 span {
     color: #99d2ff;
 }
+
 .brand-logo {
     padding: 20px;
 }
@@ -9,6 +10,23 @@ span {
     position: relative;
 }
 
-#card-results {
-    visibility: hidden;
+
+.random-word-box{
+    padding: 50px;
+    border: #99d2ff solid 5px;
+    box-shadow: 10px 10px;
+    justify-content: center;
+
+}
+
+#randomWord{
+    color: orange;
+
+}
+
+.contribute {
+    padding: 20px;
+    justify-content: center;
+
+
 }
