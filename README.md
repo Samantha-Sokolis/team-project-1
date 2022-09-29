@@ -42,8 +42,8 @@ Website URL: ("https://samantha-sokolis.github.io/team-project-1/")
 
 ![Screenshot of webpage](assets/WordUp_screenshot_translated.png)
 ![Screenshot of wireframe with filters - now future dev](assets/WordUp_Wireframe_Filters.jpg)
-![Screenshot of wireframe](team-project-1/assets/WordUp_Wireframe_Home.jpg)
-![Screenshot of wireframe with results](team-project-1/assets/WordUp_Wireframe_Result.jpg)
+![Screenshot of wireframe](assets/WordUp_Wireframe_Home.jpg)
+![Screenshot of wireframe with results](assets/WordUp_Wireframe_Result.jpg)
 
 ## Directions for Future Development
 - Sidebar function to include links to past searches 
