@@ -8,3 +8,7 @@ span {
 .hero-image {
     position: relative;
 }
+
+#card-results {
+    visibility: hidden;
+}
