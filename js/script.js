@@ -145,7 +145,7 @@ function searchApi() {
   var word = JSON.stringify(query);
 
 
-  //Time delay to work within the confines of the api subscription
+  //Time delay to work within the confines of the api subscription which only allows one call per second
   getArabic();
   setTimeout(getDutch, 2000);
   setTimeout(getFrench, 4000);
