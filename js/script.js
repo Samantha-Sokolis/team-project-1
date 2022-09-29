@@ -70,7 +70,7 @@ var searchFormEl = document.querySelector("#search-form");
 
 // Buttons for when translations were prompted by user
 
-//var searchInputVal = document.querySelector("#search-input");
+var searchInputVal = document.querySelector("#search-input");
 //var dutchBtn = document.querySelector("#nl-button");
 //var frenchBtn = document.querySelector("#fr-button");
 //var germanBtn = document.querySelector("#de-button");
