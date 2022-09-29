@@ -40,7 +40,7 @@ Open the application in your browser and enter a word into the search bar to beg
 
 Website URL: ("https://samantha-sokolis.github.io/team-project-1/")
 
-![Screenshot of webpage](/team-project-1\assets\WordUp_screenshot_translated.png)
+![Screenshot of webpage](/team-project-1/assets/WordUp_screenshot_translated.png)
 ![Screenshot of wireframe with filters - now future dev](/team-project-1/assets/WordUp_Wireframe_Filters.jpg)
 ![Screenshot of wireframe](/team-project-1/assets/WordUp_Wireframe_Home.jpg)
 ![Screenshot of wireframe with results](/team-project-1/assets/WordUp_Wireframe_Result.jpg)
