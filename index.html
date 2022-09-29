@@ -32,13 +32,13 @@
                         </a></li>
                     <li><a href="#random-form">
                             <h5>Random Word</h5>
-                     </a></li>
+                        </a></li>
                 </ul>
             </div>
         </nav>
 
     </div>
-    
+
 
     <body>
         <div class="container">
@@ -59,17 +59,9 @@
         <!-- Nav Bar above-->
         <!-- Hero Logo SAM/-->
 
-
-
-
-        <!-- Recent search summary-->
-        <!-- Word of the Day -->
-        <!-- Fun fact PH-->
         <!-- Add form for search bar-->
         <section>
-            <!-- Recent search summary-->
-            <!-- Word of the Day -->
-            <!-- Fun fact PH-->
+
             <!-- Add form for search bar-->
 
             <div class="container">
@@ -78,10 +70,10 @@
                         <div class="row">
                             <div class="input-field col s10">
                                 <i class="material-icons prefix">search</i>
-                                
+
                                 <input id="search-input" class="form-input w-100" type="text"
                                     placeholder="Enter your word...">
-                                <!--Add multiple select dropdown for filtering search request
+                                <!--Add multiple select dropdown for filtering search request - moved to future dev
                                                      <div class="input-field col s8">
                                                         <select multiple id="language-input">
                                                             <option value="" disabled selected>Choose up to 4 languages</option>
@@ -96,215 +88,220 @@
                                                             <option value="es">Spanish</option>
                                                             <option value="th">Thai</option>
                                                         </select> -->
-                                                      
-                                                        
-                                                        <button class="btn waves-effect waves-light" type="submit" name="action"><a class="white-text"> Translate </a>
-                                                            <i class="material-icons right">send</i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                        </form>
+
+                                <!--Button to submit form-->
+                                <button class="btn waves-effect waves-light" type="submit" name="action"><a
+                                        class="white-text"> Translate </a>
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+            </div>
+            <!-- Result card for translation for each translation-->
+            <section class="results-all" id="card-results">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="ar-translation">WORD?</h3>
                                     </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-ar">Arabic</span>
+
                                     </div>
-                                    <!-- Result card for translation for initial translation-->
-                                    <section class="results-all" id="card-results">
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col s12">
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="ar-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-ar">Arabic</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="nl-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-nl">Dutch</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="fr-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-fr">French</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="de-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-de">German</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="el-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-el">Greek</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="it-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-it">Italian</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="ja-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-ja">Japanese</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="ru-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-ru">Russian</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                        
-                                                    <div class="col result">
-                                                        <div class="card">
-                                                            <div class="row"></div>
-                                                            <div class="card-translation center blue-text text-lighten-2 p2">
-                                                                <h3 class="activator" id="es-translation">WORD?</h3>
-                                                            </div>
-                                                            <div class="card-content">
-                                                                <span class="card-title activator orange-text text-accent-3 origin"
-                                                                    id="lang-es">Spanish</span>
-                        
-                                                            </div>
-                        
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                        
-                                        </div>
-                                    </section>
-                                    <!--Result cards more BEC-->
-                        
-                                </section>
-        <!--- Random word -->
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="nl-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-nl">Dutch</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="fr-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-fr">French</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="de-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-de">German</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="el-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-el">Greek</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="it-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-it">Italian</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="ja-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-ja">Japanese</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="ru-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-ru">Russian</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col result">
+                                <div class="card">
+                                    <div class="row"></div>
+                                    <div class="card-translation center blue-text text-lighten-2 p2">
+                                        <h3 class="activator" id="es-translation">WORD?</h3>
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator orange-text text-accent-3 origin"
+                                            id="lang-es">Spanish</span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </section>
+
+
+        </section>
+        <!--- Random word generator-->
         <section class="section container" id="random-form">
             <div class="row">
                 <div class="col s12 m4 l8">
                     <div class="random-word-box">
                         <h4> Random Word: <span id="randomWord"> </span> </h4>
-                        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large" onclick="M.toast({html: 'Abra-cadabra!', classes: 'rounded'})"> Get Word!</a></button>
+                        <button type="submit" id="random-button"> <a class="waves-effect waves-light btn-large"
+                                onclick="M.toast({html: 'Abra-cadabra!', classes: 'rounded'})"> Get Word!</a></button>
                     </div>
                 </div>
-            </div>            
+            </div>
         </section>
 
 
         <!-- About -->
+        <!--Text animation-->
         <main>
-        <section class="section container" id="services">
-            <div class="row">
-                <div class="col s12 l6" id="About">
-                    <h2> Created to help inspire ideas for</h2>
-                    <h2> <span class="auto-type" id="auto-text"></span> </h2>
-
-                </div>
-                <div class="col s12 l6">
-                    <!-- tabs -->
-                    <ul class="tabs">
-                        <li class="tab col s6">
-                            <a href="#who" class="active indigo-text text-darken-4"> Who we are </a>
-                        </li>
-                        <li class="tab col s6">
-                            <a href="#what" class="indigo-text text-darken-4"> What we do </a>
-                        </li>
-                    </ul>
-                    <div id="who" class="col s12">
-                        <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
-                        <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
-                        <p> We decided that we needed a platform to allow creatives to quickly access multiple
-                            languages without additional search queries. </p>
+            <section class="section container" id="services">
+                <div class="row">
+                    <div class="col s12 l6" id="About">
+                        <h2> Created to help inspire ideas for</h2>
+                        <h2> <span class="auto-type" id="auto-text"></span> </h2>
 
                     </div>
-                    <div id="what" class="col s12">
-                        <p class="flow-text indigo-text text-darken-4">What we do</p>
-                        <p> Word UP provides users the option to translate a word into multiple languages with just one
-                            search! </p>
-                        <p> Built for creative professionals to spark ideas for brand/product names or copy writing and
-                            campaigns. </p>
+                    <div class="col s12 l6">
+                        <!-- tabs -->
+                        <ul class="tabs">
+                            <li class="tab col s6">
+                                <a href="#who" class="active indigo-text text-darken-4"> Who we are </a>
+                            </li>
+                            <li class="tab col s6">
+                                <a href="#what" class="indigo-text text-darken-4"> What we do </a>
+                            </li>
+                        </ul>
+                        <div id="who" class="col s12">
+                            <p class="flow-text indigo-text text-darken-4"> Who We Are </p>
+                            <p> Like most others, we are always trying to find sources of inspiration for projects. </p>
+                            <p> We decided that we needed a platform to allow creatives to quickly access multiple
+                                languages without additional search queries. </p>
+
+                        </div>
+                        <div id="what" class="col s12">
+                            <p class="flow-text indigo-text text-darken-4">What we do</p>
+                            <p> Word UP provides users the option to translate a word into multiple languages with just
+                                one
+                                search! </p>
+                            <p> Built for creative professionals to spark ideas for brand/product names or copy writing
+                                and
+                                campaigns. </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </div>
-        </section>
+                </div>
+            </section>
         </main>
         <!-- Contribute (form) -->
 
@@ -330,14 +327,14 @@
                             <label for="message"> Your message </label>
                         </div>
                         <div class="input-field center">
-                            <button class="btn waves-effect waves-light" type="button" name="action"
-                                href="#contribute"onclick="M.toast({html: 'Your form has been successfully submitted',})">Submit
+                            <button class="btn waves-effect waves-light" type="button" name="action" href="#contribute"
+                                onclick="M.toast({html: 'Your form has been successfully submitted',})">Submit
                                 <i class="material-icons right">send</i>
                             </button>
                         </div>
                     </form>
                 </div>
-            </div>            
+            </div>
         </section>
 
         <!-- Footer ASISH-->
@@ -354,9 +351,12 @@
                     <div class="col s3">
                         <h5 class="white-text"> CONNECT </h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/corgistagrams/?hl=en"> Instagram </a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://twitter.com/aboutcorgis?lang=en"> Twitter </a></li>
-                            <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/groups/555989291132852/"> Facebook </a></li>
+                            <li><a class="grey-text text-lighten-3"
+                                    href="https://www.instagram.com/corgistagrams/?hl=en"> Instagram </a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://twitter.com/aboutcorgis?lang=en">
+                                    Twitter </a></li>
+                            <li><a class="grey-text text-lighten-3"
+                                    href="https://www.facebook.com/groups/555989291132852/"> Facebook </a></li>
                         </ul>
                     </div>
                 </div>

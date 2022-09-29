@@ -1,3 +1,4 @@
+/* Custom styling to supplement Materialize framework */
 span {
     color: #99d2ff;
 }
@@ -11,7 +12,7 @@ span {
 }
 
 
-.random-word-box{
+.random-word-box {
     padding: 50px;
     border: #99d2ff solid 5px;
     box-shadow: 10px 10px;
@@ -19,7 +20,7 @@ span {
 
 }
 
-#randomWord{
+#randomWord {
     color: orange;
 
 }
@@ -32,7 +33,7 @@ span {
 }
 
 h3 {
-    padding:20px;
+    padding: 20px;
 }
 
 #card-results {
