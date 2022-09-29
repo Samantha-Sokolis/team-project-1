@@ -12,3 +12,7 @@ span {
 #card-results {
     visibility: hidden;
 }
+
+a {
+    text-decoration: none;
+}

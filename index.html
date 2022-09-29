@@ -87,8 +87,7 @@
                     <form class="col s12">
                         <!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button - hero image hides-->
                         <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
-                            <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';">
-                                <h4>TRANSLATE</h4>
+
                             </a>
                         </div>
                     </form>
@@ -135,8 +134,9 @@
                                                             <option value="ru">Russian</option>
                                                             <option value="es">Spanish</option>
                                                             <option value="th">Thai</option>
+                                
                                                         </select> -->
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Translate
+                                                        <button class="btn waves-effect waves-light white-text" type="submit" name="action"><a href="javascript:;" onClick="document.getElementById('hideaway').style.display='none';">Translate</a>
                                     <i class="material-icons right">send</i>
                                 </button>
                             </div>
@@ -302,7 +302,7 @@
 
         </section>
         <!-- Result cards more BEC-->
-        <!--- Random word 
+        <!--- Random word --
 
         <div class="random-word-box card col s6 l3">
             <h3> Random Word: <span id="randomWord"> </span> </h3>

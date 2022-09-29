@@ -132,7 +132,7 @@ function searchApi() {
 
     function getArabic() {
 
-    bodyQueryAr = "'" + "{" + '"' + "texts" + '":' + "[" + '"' + word + '"' + "]," + '"' +  "to" + '":' + "[" + '"ar"' + '],"from":"en"}' + "'";
+    //bodyQueryAr = "'" + "{" + '"' + "texts" + '":' + "[" + '"' + word + '"' + "]," + '"' +  "to" + '":' + "[" + '"ar"' + '],"from":"en"}' + "'";
 
     var textArabic = document.querySelector("#ar-translation");
 
@@ -145,8 +145,8 @@ function searchApi() {
         'X-RapidAPI-Key': 'be700dc170msh185422a953a88bdp187f43jsn89ed7693a79b',
         'X-RapidAPI-Host': 'lecto-translation.p.rapidapi.com'
       },
-      //body: '{"texts":["hi"],"to":["ar"],"from":"en"}'
-      body: JSON.stringify(bodyQueryAr)
+      body: '{"texts":["hi"],"to":["ar"],"from":"en"}'
+      //body: JSON.stringify(bodyQueryAr)
     };
 
   fetch(locQueryUrl, options)
