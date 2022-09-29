@@ -79,6 +79,10 @@ var japaneseText = document.querySelector("#ja-translation");
 var russianText = document.querySelector("#ru-translation");
 var spanishText = document.querySelector("#es-translation");
 
+let query = searchInputVal.value;
+
+var word = query.toString();
+
 //function printResults(locRes) {
 
  // console.log(locRes.translations[i].translated);
@@ -121,70 +125,60 @@ function searchApi() {
 
   let query = searchInputVal.value;
 
-  //var word = query.toString();
+  var word = query.toString();
 
   getArabic();
 
-    //var lang = "ar";
-
-    //bodyQuery = "'" + "{" + '"' + "texts" + '":' + "[" + '"' + word + '"' + "]," + '"' +  "to" + '":' + "[" + '"' + lang + '"' + '],"from":"en"}' + "'";
-
-    //var queryString = bodyQuery.toString();
-
-    //console.log(queryString);
 
     function getArabic() {
 
+    bodyQueryAr = "'" + "{" + '"' + "texts" + '":' + "[" + '"' + word + '"' + "]," + '"' +  "to" + '":' + "[" + '"ar"' + '],"from":"en"}' + "'";
+
     var textArabic = document.querySelector("#ar-translation");
 
-    var locQueryUrl = "https://lecto-translation.p.rap1idapi.com/v1/translate/text";
+    var locQueryUrl = "https://lecto-translation.p.rapidapi.com/v1/translate/text";
 
     var options = {
-      method: "POST",
+      method: 'POST',
       headers: {
         'content-type': 'application/json',
         'X-RapidAPI-Key': 'be700dc170msh185422a953a88bdp187f43jsn89ed7693a79b',
         'X-RapidAPI-Host': 'lecto-translation.p.rapidapi.com'
       },
-      body: '{"texts":["hi"],"to":["ar"],"from":"en"}'
+      //body: '{"texts":["hi"],"to":["ar"],"from":"en"}'
+      body: JSON.stringify(bodyQueryAr)
     };
 
-    fetch(locQueryUrl, options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .then(function (response) {
-        if (!response.ok) {
-          throw response.json();
-        }
+  fetch(locQueryUrl, options)
+  .then(function (response) {
+    if (!response.ok) {
+      throw response.json();
+    }
 
-        return response.json();
-      })
-      .then(function (locRes) {
-        // write query to page so user knows what they are viewing
-        textArabic.textContent = locRes.translations[0].translated;
+    return response.json();
+  })
+  .then(function (locRes) {
+    // write query to page so user knows what they are viewing
+    textArabic.textContent = locRes.translations[0].translated;
 
-        console.log(locRes);
-      })
+    console.log(locRes.translations[0].translated);
 
-      .catch(function (error) {
-        console.error(error);
-      });
+  })
+  .catch(function (error) {
+    console.error(error);
+  });}
 
-    resultTextEl.textContent = query;
-
-    //printResults(data, translations[i]);
-
-  }}
+}
 
   function getDutch() {
 
     dutchBtn.disabled = true;
     dutchBtn.textContent = "DUTCH";
 
-    var locQueryUrl = "https://lecto-translation.p.rap1idapi.com/v1/translate/text";
+    var locQueryUrl = "https://lecto-translation.p.rapidapi.com/v1/translate/text";
 
     var options = {
-      method: "POST",
+      method: 'POST',
       headers: {
         'content-type': 'application/json',
         'X-RapidAPI-Key': 'be700dc170msh185422a953a88bdp187f43jsn89ed7693a79b',
@@ -193,40 +187,38 @@ function searchApi() {
       body: '{"texts":["hi"],"to":["nl"],"from":"en"}'
     };
 
-    fetch(locQueryUrl, options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .then(function (response) {
-        if (!response.ok) {
-          throw response.json();
-        }
+  fetch(locQueryUrl, options)
+  .then(function (response) {
+    if (!response.ok) {
+      throw response.json();
+    }
 
-        return response.json();
-      })
-      .then(function (locRes) {
-        // write query to page so user knows what they are viewing
-        dutchText.textContent = locRes.translations[0].translated;
+    return response.json();
+  })
+  .then(function (locRes) {
+    // write query to page so user knows what they are viewing
+    
+    dutchText.textContent = locRes.translations[0].translated;
 
-        console.log(locRes);
-      })
+    console.log(locRes.translations[0].translated);
 
-      .catch(function (error) {
-        console.error(error);
-      });
-
-    resultTextEl.textContent = query;
+  })
+  .catch(function (error) {
+    console.error(error);
+  });
 
 }
+
 
 function getFrench() {
 
   frenchBtn.disabled = true;
   frenchBtn.textContent = "FRENCH";
 
-  var locQueryUrl = "https://lecto-translation.p.rap1idapi.com/v1/translate/text";
+  var locQueryUrl = "https://lecto-translation.p.rapidapi.com/v1/translate/text";
 
   var options = {
-    method: "POST",
+    method: 'POST',
     headers: {
       'content-type': 'application/json',
       'X-RapidAPI-Key': 'be700dc170msh185422a953a88bdp187f43jsn89ed7693a79b',
@@ -235,28 +227,100 @@ function getFrench() {
     body: '{"texts":["hi"],"to":["fr"],"from":"en"}'
   };
 
-  fetch(locQueryUrl, options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .then(function (response) {
-      if (!response.ok) {
-        throw response.json();
-      }
+fetch(locQueryUrl, options)
+.then(function (response) {
+  if (!response.ok) {
+    throw response.json();
+  }
 
-      return response.json();
-    })
-    .then(function (locRes) {
-      // write query to page so user knows what they are viewing
-      frenchText.textContent = locRes.translations[0].translated;
+  return response.json();
+})
+.then(function (locRes) {
+  // write query to page so user knows what they are viewing
+  frenchText.textContent = locRes.translations[0].translated;
 
-      console.log(locRes);
-    })
+  console.log(locRes.translations[0].translated);
 
-    .catch(function (error) {
-      console.error(error);
-    });
+})
+.catch(function (error) {
+  console.error(error);
+});
 
-  resultTextEl.textContent = query;
+}
+
+function getGerman() {
+
+  germanBtn.disabled = true;
+  germanBtn.textContent = "GERMAN";
+
+  var locQueryUrl = "https://lecto-translation.p.rapidapi.com/v1/translate/text";
+
+  var options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': 'be700dc170msh185422a953a88bdp187f43jsn89ed7693a79b',
+      'X-RapidAPI-Host': 'lecto-translation.p.rapidapi.com'
+    },
+    body: '{"texts":["hi"],"to":["de"],"from":"en"}'
+  };
+
+fetch(locQueryUrl, options)
+.then(function (response) {
+  if (!response.ok) {
+    throw response.json();
+  }
+
+  return response.json();
+})
+.then(function (locRes) {
+  // write query to page so user knows what they are viewing
+  germanText.textContent = locRes.translations[0].translated;
+
+  console.log(locRes.translations[0].translated);
+
+})
+.catch(function (error) {
+  console.error(error);
+});
+
+}
+
+function getGreek() {
+
+  greekBtn.disabled = true;
+  greekBtn.textContent = "GREEK";
+
+  var locQueryUrl = "https://lecto-translation.p.rapidapi.com/v1/translate/text";
+
+  var options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': 'be700dc170msh185422a953a88bdp187f43jsn89ed7693a79b',
+      'X-RapidAPI-Host': 'lecto-translation.p.rapidapi.com'
+    },
+    body: '{"texts":["hi"],"to":["el"],"from":"en"}'
+  };
+
+fetch(locQueryUrl, options)
+.then(function (response) {
+  if (!response.ok) {
+    throw response.json();
+  }
+
+  return response.json();
+})
+.then(function (locRes) {
+  // write query to page so user knows what they are viewing
+  greekText.textContent = locRes.translations[0].translated;
+
+  console.log(locRes.translations[0].translated);
+
+})
+.catch(function (error) {
+  console.error(error);
+});
 
 }
 
@@ -287,8 +351,8 @@ searchFormEl.addEventListener("submit", handleSearchFormSubmit);
 
 dutchBtn.addEventListener("click", getDutch);
 frenchBtn.addEventListener("click", getFrench);
-//germanBtn.addEventListener("click", getGerman);
-//greekBtn.addEventListener("click", getGreek);
+germanBtn.addEventListener("click", getGerman);
+greekBtn.addEventListener("click", getGreek);
 //italianBtn.addEventListener("click", getItalian);
 //japaneseBtn.addEventListener("click", getJapanese);
 //russianBtn.addEventListener("click", getRussian);
