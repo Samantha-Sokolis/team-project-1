@@ -1,4 +1,8 @@
 
+// jQuery for side bar
+
+
+
 // jQuery for select options in form
 
 $(document).ready(function () {
