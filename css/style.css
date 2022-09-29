@@ -44,6 +44,10 @@ h3 {
     display: block;
 }
 
+#recent li {
+    text-align: center;
+}
+
 a {
     text-decoration: none;
 }

@@ -61,16 +61,18 @@ function getRandomWord(event) {
 
 $("#random-button").on("click", getRandomWord);
 
-var resultTextEl = document.querySelector("#result-text");
-var resultContentEl = document.querySelector("#result-content");
-var searchFormEl = document.querySelector("#search-form");
-
 
 // Search Results
 
 // Buttons for when translations were prompted by user
-
 var searchInputVal = document.querySelector("#search-input");
+var resultTextEl = document.querySelector("#result-text");
+var resultContentEl = document.querySelector("#result-content");
+var searchFormEl = document.querySelector("#search-form");
+var recent = document.querySelector("#recent");
+var recentText = document.querySelector("#recent-text");
+var searchList = document.getElementById("search-list");
+
 //var dutchBtn = document.querySelector("#nl-button");
 //var frenchBtn = document.querySelector("#fr-button");
 //var germanBtn = document.querySelector("#de-button");
@@ -91,6 +93,9 @@ var searchInputVal = document.querySelector("#search-input");
 // User input for translation
 
 let query = searchInputVal.value;
+var searches = [];
+var queryValue = searchInputVal.value;
+
 
 var word = JSON.stringify(query);
 
@@ -528,11 +533,28 @@ function searchApi() {
 function handleSearchFormSubmit(event) {
   event.preventDefault();
 
+  var queryValue = searchInputVal.value;
+
+  var searchesText = {
+    queryValue: queryValue.trim()
+  };
+
+  if (searchesText === "") {
+    return;
+  }
+
+  searches.push(searchesText);
+  
+
+  storeSearches();
+  console.log(searches);
+
   var heroDisplay = document.querySelector('#hideaway');
   heroDisplay.setAttribute("style", "display=none;");
 
 
-  var queryValue = searchInputVal.value;
+
+  
 
 
   console.log("Text is " + queryValue);
@@ -543,6 +565,7 @@ function handleSearchFormSubmit(event) {
   } else {
 
     searchApi();
+    renderSearches();
 
   };
 }
@@ -560,3 +583,50 @@ searchFormEl.addEventListener("submit", handleSearchFormSubmit);
 //japaneseBtn.addEventListener("click", getJapanese);
 //russianBtn.addEventListener("click", getRussian);
 //spanishBtn.addEventListener("click", getSpanish);
+
+// Storing search history
+
+// Retrive stored history on load
+function init() {
+  var storedSearches = JSON.parse(localStorage.getItem("searches"));
+
+  if (storedSearches !== null) {
+    searches = storedSearches;
+  }
+
+  renderSearches()
+}
+
+// Save searches
+function storeSearches() {
+  // Stringify and set key in localStorage to searches array
+  localStorage.setItem("searches", JSON.stringify(searches));
+}
+
+// Render searches
+function renderSearches() {
+  // Update text content of search history
+  recentText.textContent = "Recent Searches";
+
+  // Add scores to recent searches and clear score list content
+  
+  searchList.innerHTML = '';
+
+  recent.appendChild(searchList);
+  
+  // Create for loop to render each score result to a new line item
+  for(var i = 0; i < searches.length; i++) {
+    var search = searches[i];
+
+    var searchLi = document.createElement("li");
+    searchLi.setAttribute("id", "recent");
+
+    searchLi.textContent = search.queryValue;
+    searchList.setAttribute("data-index", i);
+
+    searchList.appendChild(searchLi);
+    }
+}
+
+init();
+
