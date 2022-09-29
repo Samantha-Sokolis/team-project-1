@@ -135,6 +135,8 @@ let query = searchInputVal.value;
 
 var word = JSON.stringify(query);
 
+
+//Time delay to work within the confines of the api subscription
 getArabic();
 setTimeout(getDutch, 2000);
 setTimeout(getFrench, 4000);
@@ -516,6 +518,7 @@ event.preventDefault();
 
 var heroDisplay = document.querySelector('#hideaway');
 heroDisplay.setAttribute("style", "display=none;");
+
 
 var queryValue = searchInputVal.value;
 
