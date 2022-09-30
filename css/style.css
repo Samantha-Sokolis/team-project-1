@@ -44,6 +44,13 @@ h3 {
     display: block;
 }
 
+#recent li {
+    text-align: center;
+    font-size: large;
+    font-style: oblique;
+    color: #64b5f6;
+}
+
 a {
     text-decoration: none;
 }

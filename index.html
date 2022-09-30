@@ -36,17 +36,16 @@
                 </ul>
             </div>
         </nav>
-
     </div>
 
 
-    <body>
+    <main>
         <div class="container">
             <div class="row">
                 <div class="section">
                     <form class="col s12">
                         <!--HERO LOGO 'main page' when browser is first seen. OnClick event - when user enters a word into the search and/or selects filters - presses TRANSLATE button - hero image hides-->
-                        <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="60%">
+                        <div id="hideaway" style="display:block;"><img src="assets/wordup_logo_hero.png" width="50%">
 
                             </a>
                         </div>
@@ -261,6 +260,32 @@
             </div>
         </section>
 
+        <!--Recent Searches-->
+
+
+        <section class="section container">
+            <div class="row">
+                <div class="col">
+                    <div class="card center-align">
+                        <div class="card-image waves-effect waves-block waves-light">
+                          <img class="activator" src="assets/wordup_hello_translated.png">
+                        </div>
+                        <div class="card-content">
+                        <span class="card-title activator orange-text text-accent-3" id="recent-text"><i class="material-icons right">add</i>
+                        </span>
+                        <span class="h6 orange-text text-accent-2 activator">Click to view</p><i class="material-icons right">add</i></span>
+                        </div>
+                        <div class="card-reveal" id="recent">
+                            <span class="card-title orange-text text-accent-3">Search History<i class="material-icons right">close</i></span>
+                        <ul id="search-list"></ul>
+                        </span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
 
         <!-- About -->
         <!--Text animation-->
@@ -370,12 +395,12 @@
 
 
 
-    </body>
+    </main>
     <!-- Compiled and minified JavaScript links-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
     <script src="js/script.js"> </script>
-
+</body>
 </html>
